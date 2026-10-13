@@ -1,0 +1,1589 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description"
+    content="Pranav Lakhe — B.Tech Computer Science & IT (2028) at SIT Nagpur. AI/ML Engineer specializing in Agentic AI pipelines, Computer Vision, and High-Performance Systems." />
+  <meta name="theme-color" content="#06070a" />
+
+  <!-- OpenGraph / Social Meta Tags -->
+  <meta property="og:type" content="website" />
+  <meta property="og:title" content="Pranav Lakhe — AI/ML & Systems Developer" />
+  <meta property="og:description"
+    content="B.Tech CS & IT student building Agentic AI, Computer Vision, and Production Systems." />
+  <meta property="og:url" content="https://github.com/Pranavv28" />
+
+  <!-- Favicon -->
+  <link rel="icon"
+    href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>⚡</text></svg>" />
+
+  <!-- Typography: Google Fonts (Space Grotesk + Plus Jakarta Sans + JetBrains Mono) -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link
+    href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;500;600&family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&family=Space+Grotesk:wght@500;600;700;800&display=swap"
+    rel="stylesheet" />
+
+  <title>Pranav Lakhe — AI/ML Engineer &amp; Systems Developer</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+
+<body>
+
+  <!-- Film Grain Overlay -->
+  <div class="grain-overlay" aria-hidden="true"></div>
+
+  <!-- Hardware-Accelerated Dynamic Live Background Canvas -->
+  <canvas id="liveBackgroundCanvas" class="live-background-canvas" aria-hidden="true"></canvas>
+
+  <!-- Preloader Screen -->
+  <div class="preloader" id="preloader" aria-hidden="true">
+    <div class="preloader-inner">
+      <div class="preloader-badge">
+        <span class="sys-dot"></span>
+        <span class="sys-text">SYSTEM_BOOT // PRANAV_LAKHE</span>
+      </div>
+      <div class="preloader-brand">
+        <span class="brand-monogram">PL</span>
+        <span class="brand-accent">.</span>
+      </div>
+      <div class="preloader-progress-track">
+        <div class="preloader-progress-fill" id="preloaderFill"></div>
+      </div>
+      <div class="preloader-status-row">
+        <span class="preloader-log" id="preloaderLog">INITIALIZING CORE ASSETS...</span>
+        <span class="preloader-counter" id="preloaderCounter">00%</span>
+      </div>
+    </div>
+  </div>
+
+  <!-- Dynamic Cursor -->
+  <div class="custom-cursor" id="customCursor" aria-hidden="true">
+    <div class="cursor-dot"></div>
+    <div class="cursor-ring"></div>
+    <div class="cursor-badge" id="cursorBadge">VIEW</div>
+  </div>
+
+  <!-- Scroll Progress Indicator -->
+  <div class="scroll-progress-bar" id="progressBar" aria-hidden="true"></div>
+
+  <!-- Navigation Bar -->
+  <header class="site-header" id="navbar">
+    <div class="nav-container">
+      <a href="#hero" class="nav-brand" aria-label="Pranav Lakhe Home">
+        <img src="profile.jpg" alt="Pranav Lakhe" class="nav-brand-avatar" />
+        <span class="brand-letters">PL</span>
+        <span class="brand-dot"></span>
+        <span class="brand-tag">DEV // 2028</span>
+      </a>
+
+      <!-- Center Status Badge -->
+      <div class="nav-status-badge">
+        <span class="status-pulse"></span>
+        <span class="status-text">AVAILABLE FOR RESEARCH &amp; ROLES</span>
+      </div>
+
+      <!-- Action & Navigation Links -->
+      <nav class="nav-menu" id="navLinks" aria-label="Main Navigation">
+        <ul class="nav-list">
+          <li><a href="#about" class="nav-link"><span class="nav-idx">01</span> About</a></li>
+          <li><a href="#projects" class="nav-link"><span class="nav-idx">02</span> Works</a></li>
+          <li><a href="#skills" class="nav-link"><span class="nav-idx">03</span> Skills</a></li>
+          <li><a href="#education" class="nav-link"><span class="nav-idx">04</span> Academic</a></li>
+          <li><a href="#certificates" class="nav-link"><span class="nav-idx">05</span> Certificates</a></li>
+          <li><a href="#achievements" class="nav-link"><span class="nav-idx">06</span> Milestones</a></li>
+          <li><a href="#contact" class="nav-link"><span class="nav-idx">07</span> Contact</a></li>
+        </ul>
+      </nav>
+
+      <div class="nav-actions">
+        <!-- Interactive Theme Palette Switcher -->
+        <button type="button" class="theme-palette-btn" id="themeToggleBtn"
+          title="Switch Color Theme (Emerald / Violet / Solar / Cyan)" aria-label="Switch Theme Palette">
+          <span class="theme-btn-icon">🎨</span>
+          <span class="theme-btn-dot"></span>
+          <span class="theme-title">Theme: <strong id="currentThemeLabel">Emerald</strong></span>
+        </button>
+
+        <button type="button" class="cmd-palette-btn" id="cmdTriggerBtn" title="Open Command Terminal (Ctrl + K)">
+          <span class="cmd-icon">⚡</span>
+          <span class="cmd-title">Cmd</span>
+          <kbd class="cmd-shortcut">Ctrl K</kbd>
+        </button>
+
+        <button type="button" class="mobile-nav-toggle" id="navToggle" aria-label="Toggle navigation menu"
+          aria-expanded="false">
+          <span class="toggle-line"></span>
+          <span class="toggle-line"></span>
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <!-- Main Content Wrap -->
+  <main id="mainContent">
+
+    <!-- HERO SECTION -->
+    <section class="hero-section" id="hero">
+      <!-- Ambient Canvas / 3D Background -->
+      <div class="hero-canvas-wrap" id="vanta-hero" aria-hidden="true">
+        <canvas id="neuralCanvas"></canvas>
+        <div class="hero-radial-glow glow-cyan"></div>
+        <div class="hero-radial-glow glow-violet"></div>
+        <div class="hero-grid-pattern"></div>
+      </div>
+
+      <!-- Slanted Kinetic Marquee Tracks (Distinct High-Energy Background) -->
+      <div class="hero-marquee-tracks" aria-hidden="true">
+        <div class="marquee-track track-left" id="heroTrackLeft">
+          <div class="marquee-stream">
+            <span>AGENTIC AI</span><span class="star">✦</span>
+            <span>COMPUTER VISION</span><span class="star">✦</span>
+            <span>MULTI-AGENT SYSTEMS</span><span class="star">✦</span>
+            <span>EDGE INFERENCE</span><span class="star">✦</span>
+            <span>FULL-STACK ARCHITECTURE</span><span class="star">✦</span>
+            <span>AGENTIC AI</span><span class="star">✦</span>
+            <span>COMPUTER VISION</span><span class="star">✦</span>
+            <span>MULTI-AGENT SYSTEMS</span><span class="star">✦</span>
+          </div>
+          <div class="marquee-stream" aria-hidden="true">
+            <span>AGENTIC AI</span><span class="star">✦</span>
+            <span>COMPUTER VISION</span><span class="star">✦</span>
+            <span>MULTI-AGENT SYSTEMS</span><span class="star">✦</span>
+            <span>EDGE INFERENCE</span><span class="star">✦</span>
+            <span>FULL-STACK ARCHITECTURE</span><span class="star">✦</span>
+            <span>AGENTIC AI</span><span class="star">✦</span>
+            <span>COMPUTER VISION</span><span class="star">✦</span>
+            <span>MULTI-AGENT SYSTEMS</span><span class="star">✦</span>
+          </div>
+        </div>
+
+        <div class="marquee-track track-right" id="heroTrackRight">
+          <div class="marquee-stream">
+            <span>PRANAV LAKHE</span><span class="star">✦</span>
+            <span>SIT NAGPUR '28</span><span class="star">✦</span>
+            <span>SIH 2026 SURVEILLANCE</span><span class="star">✦</span>
+            <span>GATE CSE ASPIRANT</span><span class="star">✦</span>
+            <span>PROBLEM SOLVER</span><span class="star">✦</span>
+            <span>PRANAV LAKHE</span><span class="star">✦</span>
+            <span>SIT NAGPUR '28</span><span class="star">✦</span>
+            <span>SIH 2026 SURVEILLANCE</span><span class="star">✦</span>
+          </div>
+          <div class="marquee-stream" aria-hidden="true">
+            <span>PRANAV LAKHE</span><span class="star">✦</span>
+            <span>SIT NAGPUR '28</span><span class="star">✦</span>
+            <span>SIH 2026 SURVEILLANCE</span><span class="star">✦</span>
+            <span>GATE CSE ASPIRANT</span><span class="star">✦</span>
+            <span>PROBLEM SOLVER</span><span class="star">✦</span>
+            <span>PRANAV LAKHE</span><span class="star">✦</span>
+            <span>SIT NAGPUR '28</span><span class="star">✦</span>
+            <span>SIH 2026 SURVEILLANCE</span><span class="star">✦</span>
+          </div>
+        </div>
+      </div>
+
+      <!-- Hero Centerpiece Stage -->
+      <div class="hero-stage container">
+        <div class="hero-telemetry-pill reveal">
+          <img src="profile.jpg" alt="Pranav Lakhe" class="hero-pill-avatar" />
+          <span class="telemetry-node"></span>
+          <span class="telemetry-label">SIT NAGPUR </span>
+          <span class="telemetry-badge">BATCH OF 2028</span>
+        </div>
+
+        <div class="hero-title-container">
+          <p class="hero-kicker reveal">SOFTWARE ENGINEER &amp; AI RESEARCHER</p>
+          <h1 class="hero-headline">
+            <span class="hero-line reveal-line" data-scramble="PRANAV">PRANAV</span>
+            <span class="hero-line hero-line-accent reveal-line" data-scramble="LAKHE">LAKHE</span>
+          </h1>
+          <div class="hero-aura-orb" aria-hidden="true"></div>
+        </div>
+
+        <p class="hero-lead reveal">
+          Third-year <strong>B.Tech Computer Science &amp; IT</strong> student at
+          <strong>Symbiosis Institute of Technology, Nagpur</strong>. Architecting agentic AI workflows,
+          real-time video analytics, and production-ready intelligent software.
+        </p>
+
+        <div class="hero-actions-row reveal">
+          <a href="#projects" class="btn btn-primary" data-cursor="EXPLORE">
+            <span>Explore Works</span>
+            <svg class="btn-arrow" width="12" height="12" viewBox="0 0 12 12" fill="none">
+              <path d="M1 11L11 1M11 1H3M11 1V9" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"
+                stroke-linejoin="round" />
+            </svg>
+          </a>
+          <button type="button" class="btn btn-secondary" id="heroCmdBtn" data-cursor="OPEN">
+            <span class="icon">⚡</span>
+            <span>Command Terminal</span>
+          </button>
+          <a href="resume.pdf" class="btn btn-ghost" id="resumeBtn" download data-cursor="DOWNLOAD">
+            <span>Resume PDF</span>
+            <svg class="btn-arrow" width="12" height="12" viewBox="0 0 12 12" fill="none">
+              <path d="M6 1V8M6 8L3 5M6 8L9 5M1 11H11" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"
+                stroke-linejoin="round" />
+            </svg>
+          </a>
+        </div>
+
+        <!-- Scroll Cue -->
+        <div class="hero-scroll-indicator" aria-hidden="true">
+          <span class="scroll-mouse"><span class="mouse-wheel"></span></span>
+          <span class="scroll-caption">SCROLL TO DISCOVER</span>
+        </div>
+      </div>
+    </section>
+
+    <!-- SECTION 01: ABOUT ME (Scroll-Driven Word Illumination) -->
+    <section class="section about-section" id="about">
+      <div class="container">
+        <div class="section-meta-header reveal-up">
+          <div class="section-badge">
+            <span class="badge-idx">01</span>
+            <span class="badge-name">IDENTITY &amp; VISION</span>
+          </div>
+          <h2 class="section-title">Engineering Systems That Hold Up Under Scrutiny</h2>
+        </div>
+
+        <div class="about-grid">
+          <!-- Left: Cyber Metadata & Telemetry Card -->
+          <div class="about-sidebar reveal-up">
+            <div class="about-id-card liquid-card">
+              <div class="id-card-avatar">
+                <img src="profile.jpg" alt="Pranav Lakhe - Profile Picture" class="avatar-img" />
+                <div class="avatar-ring"></div>
+                <span class="avatar-status-dot" title="Active"></span>
+              </div>
+              <div class="id-card-info">
+                <h3 class="id-name">Pranav Lakhe</h3>
+                <p class="id-sub">B.Tech CS &amp; IT · Symbiosis International</p>
+                <div class="id-tag-row">
+                  <span class="id-pill">Nagpur, India</span>
+                  <span class="id-pill">Graduating 2028</span>
+                </div>
+              </div>
+              <div class="id-metrics-stack">
+                <div class="id-metric-item">
+                  <span class="metric-num stat-num" data-count="3">0</span>
+                  <span class="metric-lbl">Year of Study</span>
+                </div>
+                <div class="id-metric-item">
+                  <span class="metric-num stat-num" data-count="6">0</span>
+                  <span class="metric-lbl">Core Projects</span>
+                </div>
+                <div class="id-metric-item">
+                  <span class="metric-num stat-num" data-count="2">0</span>
+                  <span class="metric-lbl">Internships</span>
+                </div>
+              </div>
+              <div class="id-card-footer">
+                <span class="id-status-text">🟢 Open for Summer Research &amp; Engineering Internships</span>
+              </div>
+            </div>
+          </div>
+
+          <!-- Right: Scroll-Driven Illuminating Statement -->
+          <div class="about-content reveal-up">
+            <div class="about-split-statement" id="aboutIlluminatedText">
+              <!-- Rendered via JS with scroll-triggered word illumination -->
+              <p class="illuminated-paragraph">
+                I'm a third-year B.Tech Computer Science & IT student at Symbiosis Institute of Technology, Nagpur
+                (Symbiosis International Deemed University), graduating in 2028. My work sits directly at the
+                convergence of Artificial Intelligence, Computer Vision, and applied software engineering — architecting
+                systems that solve real, measurable problems rather than just functioning as isolated demos.
+              </p>
+              <p class="illuminated-paragraph">
+                I've built autonomous agentic AI pipelines, healthcare ROI analytics dashboards, and real-time edge
+                video-analytics for border surveillance under the SIH 2026 Sashastra Seema Bal problem statement.
+                Concurrently, I'm contributing to research on multi-agent architectures for AI coding assistants and
+                actively preparing for GATE CSE.
+              </p>
+              <p class="illuminated-paragraph">
+                I place high priority on production-minded architectures, clean documentation, robust test coverage, and
+                software that stands up under scrutiny — whether in an academic viva, an interview, or high-concurrency
+                production.
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- SECTION 02: FEATURED CASES / WORKS -->
+    <section class="section cases-section" id="projects">
+      <div class="container">
+        <div class="cases-header-row reveal-up">
+          <div class="section-meta-header">
+            <div class="section-badge">
+              <span class="badge-idx">02</span>
+              <span class="badge-name">SELECTED WORKS</span>
+            </div>
+            <h2 class="section-title">Featured Case Studies</h2>
+            <p class="section-subtitle">Production-oriented systems spanning multi-agent AI pipelines, computer vision,
+              and real-time analytics.</p>
+          </div>
+
+          <!-- Filter Pills -->
+          <div class="case-filters" id="projectFilters" role="tablist" aria-label="Project Categories">
+            <button class="filter-tab active" data-filter="all" role="tab" aria-selected="true">All Works (6)</button>
+            <button class="filter-tab" data-filter="ai-agentic" role="tab" aria-selected="false">Agentic AI &amp;
+              LLMs</button>
+            <button class="filter-tab" data-filter="cv" role="tab" aria-selected="false">Computer Vision</button>
+            <button class="filter-tab" data-filter="web-analytics" role="tab" aria-selected="false">Analytics &amp;
+              Dashboards</button>
+          </div>
+        </div>
+
+        <!-- Cases Showcase Grid -->
+        <div class="cases-grid" id="projectList">
+
+          <!-- CASE 01 -->
+          <article class="case-card liquid-card reveal-up" data-category="ai-agentic" data-project-id="0">
+            <div class="case-top-meta">
+              <span class="case-num"># 01</span>
+              <span class="case-cat-badge">Research · Multi-Agent</span>
+              <span class="case-state-badge">In Progress</span>
+            </div>
+
+            <!-- Visual Schematic Frame -->
+            <div class="case-visual-frame" data-cursor="VIEW">
+              <div class="case-schematic schematic-agent">
+                <div class="schematic-node node-planner">
+                  <span class="node-icon">🧠</span>
+                  <span class="node-lbl">Planner</span>
+                </div>
+                <div class="schematic-connector conn-1"></div>
+                <div class="schematic-node node-coder">
+                  <span class="node-icon">⚡</span>
+                  <span class="node-lbl">Synthesizer</span>
+                </div>
+                <div class="schematic-connector conn-2"></div>
+                <div class="schematic-node node-reviewer">
+                  <span class="node-icon">🔍</span>
+                  <span class="node-lbl">Reviewer</span>
+                </div>
+                <div class="schematic-connector conn-3"></div>
+                <div class="schematic-node node-tester">
+                  <span class="node-icon">🛡️</span>
+                  <span class="node-lbl">Tester</span>
+                </div>
+                <div class="schematic-radar-circle"></div>
+              </div>
+            </div>
+
+            <div class="case-content">
+              <h3 class="case-title">Multi-Agent AI Coding Assistant (ACEx)</h3>
+              <p class="case-description">
+                A research paper investigating cyclic multi-agent architectures for AI-driven software engineering —
+                exploring role decomposition, deterministic vector memory, and self-correcting validation loops.
+              </p>
+              <div class="case-stack-tags">
+                <span class="stack-pill">Multi-Agent Systems</span>
+                <span class="stack-pill">LangChain</span>
+                <span class="stack-pill">LLMs</span>
+                <span class="stack-pill">Vector DB</span>
+                <span class="stack-pill">Python</span>
+              </div>
+              <div class="case-actions">
+                <button type="button" class="btn-case-modal project-link-btn" data-open-modal="0">
+                  <span>Deep Dive Architecture</span>
+                  <svg width="12" height="12" viewBox="0 0 12 12" fill="none">
+                    <path d="M1 11L11 1M11 1H3M11 1V9" stroke="currentColor" stroke-width="1.8" />
+                  </svg>
+                </button>
+              </div>
+            </div>
+          </article>
+
+          <!-- CASE 02 -->
+          <article class="case-card liquid-card reveal-up" data-category="ai-agentic" data-project-id="1">
+            <div class="case-top-meta">
+              <span class="case-num"># 02</span>
+              <span class="case-cat-badge">Agentic AI &amp; Automation</span>
+              <span class="case-state-badge completed">Production Ready</span>
+            </div>
+
+            <!-- Visual Schematic Frame -->
+            <div class="case-visual-frame" data-cursor="VIEW">
+              <div class="case-schematic schematic-health">
+                <div class="health-hud">
+                  <div class="hud-stat-box">
+                    <span class="hud-val">99.2%</span>
+                    <span class="hud-key">OCR RECALL</span>
+                  </div>
+                  <div class="hud-waveform">
+                    <svg viewBox="0 0 200 40" class="ecg-wave">
+                      <path d="M0,20 L40,20 L50,5 L60,35 L70,20 L110,20 L120,8 L130,32 L140,20 L200,20" fill="none"
+                        stroke="currentColor" stroke-width="2" />
+                    </svg>
+                  </div>
+                  <div class="hud-tag-box">
+                    <span class="hud-badge">NER EXTRACTED</span>
+                    <span class="hud-badge">GUARDRAILED</span>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <div class="case-content">
+              <h3 class="case-title">Health Report Summarizer — Agentic AI</h3>
+              <p class="case-description">
+                Autonomous medical report ingestion pipeline parsing complex laboratory diagnostics, extracting
+                biomarker anomalies, and generating empathetic patient-comprehensible summaries with safety thresholds.
+              </p>
+              <div class="case-stack-tags">
+                <span class="stack-pill">Agentic AI</span>
+                <span class="stack-pill">Clinical NLP</span>
+                <span class="stack-pill">Document OCR</span>
+                <span class="stack-pill">FastAPI</span>
+                <span class="stack-pill">Python</span>
+              </div>
+              <div class="case-actions">
+                <button type="button" class="btn-case-modal project-link-btn" data-open-modal="1">
+                  <span>Deep Dive Architecture</span>
+                  <svg width="12" height="12" viewBox="0 0 12 12" fill="none">
+                    <path d="M1 11L11 1M11 1H3M11 1V9" stroke="currentColor" stroke-width="1.8" />
+                  </svg>
+                </button>
+              </div>
+            </div>
+          </article>
+
+          <!-- CASE 03 -->
+          <article class="case-card liquid-card reveal-up" data-category="cv" data-project-id="2">
+            <div class="case-top-meta">
+              <span class="case-num"># 03</span>
+              <span class="case-cat-badge">Smart India Hackathon</span>
+              <span class="case-state-badge prototype">SIH 2026 / SSB</span>
+            </div>
+
+            <!-- Visual Schematic Frame -->
+            <div class="case-visual-frame" data-cursor="VIEW">
+              <div class="case-schematic schematic-vision">
+                <div class="vision-crosshair"></div>
+                <div class="vision-target-box target-1">
+                  <span class="target-lbl">PERSON // 98.4%</span>
+                </div>
+                <div class="vision-target-box target-2">
+                  <span class="target-lbl">VEHICLE // 94.1%</span>
+                </div>
+                <div class="vision-tripwire">
+                  <span class="tripwire-text">PERIMETER_SECURED</span>
+                </div>
+              </div>
+            </div>
+
+            <div class="case-content">
+              <h3 class="case-title">SIH26187 — AI Video Surveillance for Borders</h3>
+              <p class="case-description">
+                Intelligent edge perimeter defense engine developed for Sashastra Seema Bal (SSB), pairing thermal &
+                optical YOLO detection, DeepSORT multi-target tracking, and tripwire alarm generation.
+              </p>
+              <div class="case-stack-tags">
+                <span class="stack-pill">Computer Vision</span>
+                <span class="stack-pill">YOLO v8</span>
+                <span class="stack-pill">DeepSORT</span>
+                <span class="stack-pill">OpenCV</span>
+                <span class="stack-pill">Edge AI</span>
+              </div>
+              <div class="case-actions">
+                <button type="button" class="btn-case-modal project-link-btn" data-open-modal="2">
+                  <span>Deep Dive Architecture</span>
+                  <svg width="12" height="12" viewBox="0 0 12 12" fill="none">
+                    <path d="M1 11L11 1M11 1H3M11 1V9" stroke="currentColor" stroke-width="1.8" />
+                  </svg>
+                </button>
+              </div>
+            </div>
+          </article>
+
+          <!-- CASE 04 -->
+          <article class="case-card liquid-card reveal-up" data-category="web-analytics" data-project-id="3">
+            <div class="case-top-meta">
+              <span class="case-num"># 04</span>
+              <span class="case-cat-badge">Institutional Systems</span>
+              <span class="case-state-badge completed">Deployed</span>
+            </div>
+
+            <!-- Visual Schematic Frame -->
+            <div class="case-visual-frame" data-cursor="VIEW">
+              <div class="case-schematic schematic-roi">
+                <div class="roi-chart-bar-group">
+                  <div class="roi-bar b1"><span class="roi-val">+34%</span></div>
+                  <div class="roi-bar b2"><span class="roi-val">+58%</span></div>
+                  <div class="roi-bar b3"><span class="roi-val">+82%</span></div>
+                  <div class="roi-bar b4"><span class="roi-val">+95%</span></div>
+                </div>
+                <div class="roi-metric-chip">
+                  <span>CAPITAL EFFICIENCY: HIGH</span>
+                </div>
+              </div>
+            </div>
+
+            <div class="case-content">
+              <h3 class="case-title">SHREEDHA — Healthcare ROI Dashboard</h3>
+              <p class="case-description">
+                Hospital accounts billing and department capital returns dashboard for SIT Nagpur Problem Statement 4,
+                resolving fragmented accounting, supply leakage, and departmental throughput.
+              </p>
+              <div class="case-stack-tags">
+                <span class="stack-pill">Financial Analytics</span>
+                <span class="stack-pill">Full-Stack</span>
+                <span class="stack-pill">Data Visualization</span>
+                <span class="stack-pill">SQL</span>
+                <span class="stack-pill">JavaScript</span>
+              </div>
+              <div class="case-actions">
+                <button type="button" class="btn-case-modal project-link-btn" data-open-modal="3">
+                  <span>Deep Dive Architecture</span>
+                  <svg width="12" height="12" viewBox="0 0 12 12" fill="none">
+                    <path d="M1 11L11 1M11 1H3M11 1V9" stroke="currentColor" stroke-width="1.8" />
+                  </svg>
+                </button>
+              </div>
+            </div>
+          </article>
+
+          <!-- CASE 05: MEMORY-POWERED CODE REVIEW AGENT -->
+          <article class="case-card liquid-card reveal-up" data-category="ai-agentic" data-project-id="4">
+            <div class="case-top-meta">
+              <span class="case-num"># 05</span>
+              <span class="case-cat-badge">Autonomous Agent · LLMs</span>
+              <span class="case-state-badge completed">Open Source</span>
+            </div>
+
+            <!-- Visual Schematic Frame -->
+            <div class="case-visual-frame" data-cursor="VIEW">
+              <div class="case-schematic schematic-memory">
+                <div class="mem-vector-core">
+                  <span class="mem-icon">🧠</span>
+                  <span class="mem-tag">VECTOR_CTX</span>
+                </div>
+                <div class="mem-arrow">➔</div>
+                <div class="mem-review-card">
+                  <span class="review-status">✓ AST VERIFIED</span>
+                  <span class="review-comment">+ Persistent Memory</span>
+                </div>
+              </div>
+            </div>
+
+            <div class="case-content">
+              <h3 class="case-title">Memory-Powered Code Review Agent</h3>
+              <p class="case-description">
+                Autonomous code reviewer maintaining institutional memory across pull requests using ChromaDB vector
+                indexes to detect architectural drift, security anti-patterns, and guideline violations.
+              </p>
+              <div class="case-stack-tags">
+                <span class="stack-pill">LangChain</span>
+                <span class="stack-pill">Vector Embeddings</span>
+                <span class="stack-pill">ChromaDB</span>
+                <span class="stack-pill">AST Analysis</span>
+                <span class="stack-pill">Python</span>
+              </div>
+              <div class="case-actions">
+                <button type="button" class="btn-case-modal project-link-btn" data-open-modal="4">
+                  <span>Deep Dive Architecture</span>
+                  <svg width="12" height="12" viewBox="0 0 12 12" fill="none">
+                    <path d="M1 11L11 1M11 1H3M11 1V9" stroke="currentColor" stroke-width="1.8" />
+                  </svg>
+                </button>
+              </div>
+            </div>
+          </article>
+
+          <!-- CASE 06: MARL FOR AUTONOMOUS TRAFFIC FLOW -->
+          <article class="case-card liquid-card reveal-up" data-category="ai-agentic" data-project-id="5">
+            <div class="case-top-meta">
+              <span class="case-num"># 06</span>
+              <span class="case-cat-badge">Reinforcement Learning</span>
+              <span class="case-state-badge prototype">Simulation</span>
+            </div>
+
+            <!-- Visual Schematic Frame -->
+            <div class="case-visual-frame" data-cursor="VIEW">
+              <div class="case-schematic schematic-marl">
+                <div class="marl-crossroad">
+                  <div class="marl-center-hub">
+                    <div class="marl-node-pulse"></div>
+                  </div>
+                  <div class="marl-car car-north">A1</div>
+                  <div class="marl-car car-south">A2</div>
+                  <div class="marl-car car-east">A3</div>
+                  <div class="marl-car car-west">A4</div>
+                </div>
+                <div class="marl-telemetry-chip">REWARD: +0.94 // Q-SYNC</div>
+              </div>
+            </div>
+
+            <div class="case-content">
+              <h3 class="case-title">MARL for Autonomous Traffic Flow</h3>
+              <p class="case-description">
+                Decentralized Multi-Agent Reinforcement Learning (MARL) framework utilizing Deep Q-Networks to
+                dynamically
+                orchestrate multi-intersection signal phases, minimizing vehicular queue latencies.
+              </p>
+              <div class="case-stack-tags">
+                <span class="stack-pill">Multi-Agent RL</span>
+                <span class="stack-pill">PyTorch</span>
+                <span class="stack-pill">Deep Q-Networks</span>
+                <span class="stack-pill">Simulation</span>
+                <span class="stack-pill">Python</span>
+              </div>
+              <div class="case-actions">
+                <button type="button" class="btn-case-modal project-link-btn" data-open-modal="5">
+                  <span>Deep Dive Architecture</span>
+                  <svg width="12" height="12" viewBox="0 0 12 12" fill="none">
+                    <path d="M1 11L11 1M11 1H3M11 1V9" stroke="currentColor" stroke-width="1.8" />
+                  </svg>
+                </button>
+              </div>
+            </div>
+          </article>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- SECTION 03: TECHNICAL SKILLS (Bento Grid Matrix) -->
+    <section class="section skills-section" id="skills">
+      <div class="container">
+        <div class="section-meta-header reveal-up">
+          <div class="section-badge">
+            <span class="badge-idx">03</span>
+            <span class="badge-name">CAPABILITIES</span>
+          </div>
+          <h2 class="section-title">Technical Skills &amp; Stack</h2>
+          <p class="section-subtitle">Rigorous toolkit spanning machine learning primitives, languages, data pipelines,
+            and systems engineering.</p>
+        </div>
+
+        <div class="bento-grid">
+          <!-- Card 1: AI / Machine Learning (Large Span 7) -->
+          <div class="bento-card bento-span-7 liquid-card reveal-up">
+            <div class="bento-header">
+              <div class="bento-icon-badge">🧠</div>
+              <div>
+                <span class="bento-sub">PRIMARY SPECIALIZATION</span>
+                <h3 class="bento-title">Artificial Intelligence &amp; ML</h3>
+              </div>
+            </div>
+            <p class="bento-desc">
+              End-to-end model development, computer vision inference pipelines, agentic workflows, and LLM
+              fine-tuning/orchestration.
+            </p>
+            <div class="skill-chips-wrap">
+              <span class="skill-chip primary"><span>TensorFlow</span><small>Deep Learning</small></span>
+              <span class="skill-chip primary"><span>PyTorch</span><small>Neural Nets</small></span>
+              <span class="skill-chip primary"><span>OpenCV</span><small>Computer Vision</small></span>
+              <span class="skill-chip highlight"><span>Agentic AI</span><small>Orchestration</small></span>
+              <span class="skill-chip highlight"><span>LangChain</span><small>LLM Agents</small></span>
+              <span class="skill-chip"><span>Scikit-learn</span><small>Statistical ML</small></span>
+              <span class="skill-chip"><span>YOLO v8</span><small>Object Detect</small></span>
+              <span class="skill-chip"><span>DeepSORT</span><small>Tracking</small></span>
+            </div>
+          </div>
+
+          <!-- Card 2: Programming Languages (Span 5) -->
+          <div class="bento-card bento-span-5 liquid-card reveal-up">
+            <div class="bento-header">
+              <div class="bento-icon-badge">💻</div>
+              <div>
+                <span class="bento-sub">CORE FOUNDATION</span>
+                <h3 class="bento-title">Languages</h3>
+              </div>
+            </div>
+            <p class="bento-desc">Strong fundamentals in algorithms, OOP, concurrency, and typed software design.</p>
+            <div class="skill-chips-wrap">
+              <span class="skill-chip highlight"><span>Python</span><small>Expert</small></span>
+              <span class="skill-chip"><span>C++</span><small>DSA &amp; Comp</small></span>
+              <span class="skill-chip"><span>Java</span><small>OOP Systems</small></span>
+              <span class="skill-chip"><span>JavaScript</span><small>ES6+ Modern</small></span>
+              <span class="skill-chip"><span>SQL</span><small>Relational</small></span>
+            </div>
+          </div>
+
+          <!-- Card 3: Data & Cloud Infrastructure (Span 5) -->
+          <div class="bento-card bento-span-5 liquid-card reveal-up">
+            <div class="bento-header">
+              <div class="bento-icon-badge">📊</div>
+              <div>
+                <span class="bento-sub">STORAGE &amp; INSIGHTS</span>
+                <h3 class="bento-title">Data &amp; Cloud</h3>
+              </div>
+            </div>
+            <p class="bento-desc">High-throughput data wrangling, analytics reporting, vector databases, and relational
+              backends.</p>
+            <div class="skill-chips-wrap">
+              <span class="skill-chip"><span>Pandas</span><small>Dataframes</small></span>
+              <span class="skill-chip"><span>NumPy</span><small>Vector Ops</small></span>
+              <span class="skill-chip"><span>Power BI</span><small>Executive Viz</small></span>
+              <span class="skill-chip"><span>MySQL</span><small>RDBMS</small></span>
+              <span class="skill-chip"><span>MongoDB</span><small>NoSQL</small></span>
+              <span class="skill-chip highlight"><span>Vector DBs</span><small>Embeddings</small></span>
+            </div>
+          </div>
+
+          <!-- Card 4: Web & Applied Systems (Span 7) -->
+          <div class="bento-card bento-span-7 liquid-card reveal-up">
+            <div class="bento-header">
+              <div class="bento-icon-badge">⚙️</div>
+              <div>
+                <span class="bento-sub">DEPLOYMENT &amp; TOOLCHAIN</span>
+                <h3 class="bento-title">Web &amp; Systems Engineering</h3>
+              </div>
+            </div>
+            <p class="bento-desc">Production API design, reactive client architectures, hardware-accelerated animations,
+              and version control.</p>
+            <div class="skill-chips-wrap">
+              <span class="skill-chip highlight"><span>FastAPI</span><small>High Perf</small></span>
+              <span class="skill-chip"><span>Flask</span><small>Microservices</small></span>
+              <span class="skill-chip"><span>React.js</span><small>Component UI</small></span>
+              <span class="skill-chip"><span>HTML5 / CSS3</span><small>Vanilla Pure</small></span>
+              <span class="skill-chip"><span>Node.js</span><small>Runtime</small></span>
+              <span class="skill-chip"><span>Git / GitHub</span><small>CI/CD</small></span>
+              <span class="skill-chip"><span>Linux / Bash</span><small>Shell Ops</small></span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- SECTION 04: ACADEMIC PERFORMANCE & EDUCATION -->
+    <section class="section edu-section" id="education">
+      <div class="container">
+        <div class="section-meta-header reveal-up">
+          <div class="section-badge">
+            <span class="badge-idx">04</span>
+            <span class="badge-name">FOUNDATION</span>
+          </div>
+          <h2 class="section-title">Education &amp; Academic Performance</h2>
+          <p class="section-subtitle">Academic journey at Symbiosis International University along with verifiable grade
+            progress.</p>
+        </div>
+
+        <div class="edu-grid">
+          <!-- Degree Card -->
+          <div class="edu-timeline-card liquid-card reveal-up">
+            <div class="edu-card-header">
+              <span class="edu-period">2023 — 2028</span>
+              <span class="edu-status-pill">Currently 3rd Year</span>
+            </div>
+            <h3 class="edu-degree">B.Tech in Computer Science &amp; IT</h3>
+            <h4 class="edu-college">Symbiosis Institute of Technology, Nagpur</h4>
+            <p class="edu-university">Symbiosis International (Deemed University)</p>
+            <p class="edu-summary">
+              Curriculum focused on Artificial Intelligence, Machine Learning, Data Structures, Algorithms, Computer
+              Networks, Database Management Systems, and Software Engineering.
+            </p>
+            <div class="edu-highlights">
+              <div class="highlight-item">
+                <span class="highlight-bullet">✦</span>
+                <span>Active Preparation for <strong>GATE CSE</strong> (Target 2027/28)</span>
+              </div>
+              <div class="highlight-item">
+                <span class="highlight-bullet">✦</span>
+                <span>Selected for <strong>Smart India Hackathon</strong> Institutional Team</span>
+              </div>
+              <div class="highlight-item">
+                <span class="highlight-bullet">✦</span>
+                <span>Authoring research on <strong>Multi-Agent Coding Frameworks</strong></span>
+              </div>
+            </div>
+          </div>
+
+          <!-- Academic Performance (CGPA Visualizer) -->
+          <div class="edu-cgpa-card liquid-card reveal-up">
+            <div class="edu-card-header">
+              <span class="edu-period">SEMESTER METRICS</span>
+              <span class="edu-status-pill">Cumulative: 7.43 CGPA</span>
+            </div>
+            <h3 class="edu-degree">Academic Performance Matrix</h3>
+            <p class="edu-summary">Interactive semester grade tracker. Values reflect authenticated academic
+              transcripts.</p>
+
+            <div class="cgpa-bars-container">
+              <div class="cgpa-bar-row">
+                <span class="cgpa-sem">Semester I</span>
+                <div class="cgpa-track">
+                  <div class="cgpa-fill" data-score="7.19" style="width: 0%"></div>
+                </div>
+                <span class="cgpa-value">7.19</span>
+              </div>
+
+              <div class="cgpa-bar-row">
+                <span class="cgpa-sem">Semester II</span>
+                <div class="cgpa-track">
+                  <div class="cgpa-fill" data-score="7.24" style="width: 0%"></div>
+                </div>
+                <span class="cgpa-value">7.24</span>
+              </div>
+
+              <div class="cgpa-bar-row">
+                <span class="cgpa-sem">Semester III</span>
+                <div class="cgpa-track">
+                  <div class="cgpa-fill" data-score="7.90" style="width: 0%"></div>
+                </div>
+                <span class="cgpa-value">7.90</span>
+              </div>
+
+              <div class="cgpa-bar-row">
+                <span class="cgpa-sem">Semester IV</span>
+                <div class="cgpa-track">
+                  <div class="cgpa-fill" data-score="7.40" style="width: 0%"></div>
+                </div>
+                <span class="cgpa-value">7.40</span>
+              </div>
+
+              <div class="cgpa-bar-row">
+                <span class="cgpa-sem">Semester V</span>
+                <div class="cgpa-track">
+                  <div class="cgpa-fill" data-score="0" style="width: 0%"></div>
+                </div>
+                <span class="cgpa-value">Ongoing</span>
+              </div>
+            </div>
+
+            <div class="cgpa-note">
+              <span>✦ Cumulative CGPA: <strong>7.43 / 10.0</strong> across 4 completed semesters</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- SECTION 05: CERTIFICATES & CREDENTIALS SYSTEM -->
+    <section class="section certificates-section" id="certificates">
+      <div class="container">
+        <div class="section-meta-header reveal-up">
+          <div class="section-badge">
+            <span class="badge-idx">05</span>
+            <span class="badge-name">VERIFIED CREDENTIALS</span>
+          </div>
+          <h2 class="section-title">Certificates &amp; Internships</h2>
+          <p class="section-subtitle">Authenticated industry internships, AI/ML credentials, systems engineering, and
+            hackathon accomplishments. (No duplicates).</p>
+        </div>
+
+        <!-- Filter Chips -->
+        <div class="cert-filters" id="certFilters" role="tablist" aria-label="Certificate Filters">
+          <button class="cert-tab active" data-cert-filter="all" role="tab" aria-selected="true">All Credentials
+            (6)</button>
+          <button class="cert-tab highlight-tab" data-cert-filter="internship" role="tab" aria-selected="false">🏆
+            Internships (Top)</button>
+          <button class="cert-tab" data-cert-filter="systems" role="tab" aria-selected="false">⚙️ Systems &amp;
+            Security</button>
+          <button class="cert-tab" data-cert-filter="hackathon" role="tab" aria-selected="false">🎯 Hackathons</button>
+        </div>
+
+        <!-- Certificates Grid (INTERNSHIPS PROMINENTLY AT TOP) -->
+        <div class="certificates-grid" id="certificatesGrid">
+
+          <!-- 01: EDUNET FOUNDATION & AICTE x IBM SKILLSBUILD INTERNSHIP (TOP) -->
+          <article class="cert-card cert-featured-card liquid-card reveal-up" data-cert-type="internship"
+            data-cert-id="0">
+            <div class="cert-badge-ribbon">
+              <span class="cert-flag highlight-flag">🏆 INDUSTRY INTERNSHIP</span>
+              <span class="cert-period">15 May 2026 – 12 June 2026</span>
+            </div>
+            <div class="cert-preview-box" data-cursor="INSPECT">
+              <img src="certificates/previews/edunet-ibm-internship.png" alt="Edunet IBM Internship Certificate"
+                class="cert-thumb" loading="lazy" />
+              <div class="cert-hover-overlay">
+                <span class="cert-inspect-pill">Quick Inspect 🔍</span>
+              </div>
+            </div>
+            <div class="cert-body">
+              <div class="cert-meta-row">
+                <span class="cert-issuer">Edunet Foundation × AICTE × IBM SkillsBuild</span>
+                <span class="cert-status-badge verified">Verified</span>
+              </div>
+              <h3 class="cert-title">Emerging Technologies Internship (Agentic AI, Cyber Security &amp; Quantum
+                Computing)</h3>
+              <p class="cert-desc">
+                4-week industry internship developing projects in Artificial Intelligence and Cloud Computing leveraging
+                IBM SkillsBuild, IBM Cloud, and IBM BOB.
+              </p>
+              <div class="cert-tags">
+                <span>STU ID: STU6995ccb089af01771424944</span>
+                <span>Internship ID: INTERNSHIP_177549002069d3d3e4f3903</span>
+              </div>
+              <div class="cert-actions">
+                <button type="button" class="btn-cert-open" data-cert-modal="0">Inspect Credential</button>
+                <a href="certificates/PRANAV LAKHE.pdf" target="_blank" rel="noopener noreferrer" class="btn-cert-pdf"
+                  title="Open Authenticated PDF">Open PDF ↗</a>
+              </div>
+            </div>
+          </article>
+
+          <!-- 02: MAINCRAFTS TECHNOLOGY INTERNSHIP (TOP) -->
+          <article class="cert-card cert-featured-card liquid-card reveal-up" data-cert-type="internship"
+            data-cert-id="1">
+            <div class="cert-badge-ribbon">
+              <span class="cert-flag highlight-flag">🏆 INDUSTRY INTERNSHIP</span>
+              <span class="cert-period">20 May 2026 – 20 June 2026</span>
+            </div>
+            <div class="cert-preview-box" data-cursor="INSPECT">
+              <img src="certificates/previews/maincrafts-internship.jpg" alt="Maincrafts AI/ML Internship Certificate"
+                class="cert-thumb" loading="lazy" />
+              <div class="cert-hover-overlay">
+                <span class="cert-inspect-pill">Quick Inspect 🔍</span>
+              </div>
+            </div>
+            <div class="cert-body">
+              <div class="cert-meta-row">
+                <span class="cert-issuer">Maincrafts Technology (MSME Govt. of India)</span>
+                <span class="cert-status-badge verified">Verified</span>
+              </div>
+              <h3 class="cert-title">Artificial Intelligence &amp; Machine Learning (AI/ML) Internship</h3>
+              <p class="cert-desc">
+                Completed hands-on industry internship focusing on ML pipeline development, model evaluation, and
+                feature engineering.
+              </p>
+              <div class="cert-tags">
+                <span>Intern ID: MT3954</span>
+                <span>MSME Reg: UDYAM-UP-75-0096043</span>
+              </div>
+              <div class="cert-actions">
+                <button type="button" class="btn-cert-open" data-cert-modal="1">Inspect Credential</button>
+                <a href="certificates/Maincrafts Certificate of Internship-38_page-0001.jpg" target="_blank"
+                  rel="noopener noreferrer" class="btn-cert-pdf" title="Open Authenticated Document">Open Document ↗</a>
+              </div>
+            </div>
+          </article>
+
+          <!-- 03: RED HAT SYSTEM ADMINISTRATION (RH124) -->
+          <article class="cert-card liquid-card reveal-up" data-cert-type="systems" data-cert-id="2">
+            <div class="cert-badge-ribbon">
+              <span class="cert-flag">SYSTEMS &amp; LINUX</span>
+              <span class="cert-period">2026</span>
+            </div>
+            <div class="cert-preview-box" data-cursor="INSPECT">
+              <img src="certificates/previews/redhat-system-admin.png" alt="Red Hat RH124 Certificate"
+                class="cert-thumb" loading="lazy" />
+              <div class="cert-hover-overlay">
+                <span class="cert-inspect-pill">Quick Inspect 🔍</span>
+              </div>
+            </div>
+            <div class="cert-body">
+              <div class="cert-meta-row">
+                <span class="cert-issuer">Red Hat</span>
+                <span class="cert-status-badge verified">Credly Verified</span>
+              </div>
+              <h3 class="cert-title">Red Hat System Administration I (RH124 - RHA)</h3>
+              <p class="cert-desc">
+                Linux kernel fundamentals, storage management, access controls, process automation, and shell
+                administration.
+              </p>
+              <div class="cert-tags">
+                <span>Red Hat Academy · Credly Badge</span>
+              </div>
+              <div class="cert-actions">
+                <button type="button" class="btn-cert-open" data-cert-modal="2">Inspect Credential</button>
+                <a href="https://www.credly.com/badges/990411b5-d6e2-46e5-8585-704d48728e31" target="_blank"
+                  rel="noopener noreferrer" class="btn-cert-pdf">Credly Badge ↗</a>
+              </div>
+            </div>
+          </article>
+
+          <!-- 04: VODAFONE IDEA & VOIS SYSTEM SECURITY -->
+          <article class="cert-card liquid-card reveal-up" data-cert-type="systems" data-cert-id="3">
+            <div class="cert-badge-ribbon">
+              <span class="cert-flag">CYBERSECURITY</span>
+              <span class="cert-period">28 March 2026</span>
+            </div>
+            <div class="cert-preview-box" data-cursor="INSPECT">
+              <img src="certificates/previews/vois-system-security.png" alt="VOIS System Security Certificate"
+                class="cert-thumb" loading="lazy" />
+              <div class="cert-hover-overlay">
+                <span class="cert-inspect-pill">Quick Inspect 🔍</span>
+              </div>
+            </div>
+            <div class="cert-body">
+              <div class="cert-meta-row">
+                <span class="cert-issuer">Vodafone Idea Foundation × VOIS</span>
+                <span class="cert-status-badge verified">Verified</span>
+              </div>
+              <h3 class="cert-title">Introduction to System Security</h3>
+              <p class="cert-desc">
+                Core cybersecurity principles, threat modeling, vulnerability detection, and organizational network
+                hardening.
+              </p>
+              <div class="cert-tags">
+                <span>ID: VFLMS26_148979</span>
+              </div>
+              <div class="cert-actions">
+                <button type="button" class="btn-cert-open" data-cert-modal="3">Inspect Credential</button>
+                <a href="certificates/Certificate.pdf" target="_blank" rel="noopener noreferrer"
+                  class="btn-cert-pdf">Open PDF ↗</a>
+              </div>
+            </div>
+          </article>
+
+          <!-- 05: INFOSYS SPRINGBOARD DSA PYTHON -->
+          <article class="cert-card liquid-card reveal-up" data-cert-type="systems" data-cert-id="4">
+            <div class="cert-badge-ribbon">
+              <span class="cert-flag">DATA STRUCTURES &amp; ALGORITHMS</span>
+              <span class="cert-period">27 October 2025</span>
+            </div>
+            <div class="cert-preview-box" data-cursor="INSPECT">
+              <img src="certificates/previews/infosys-dsa-python.png" alt="Infosys DSA using Python Certificate"
+                class="cert-thumb" loading="lazy" />
+              <div class="cert-hover-overlay">
+                <span class="cert-inspect-pill">Quick Inspect 🔍</span>
+              </div>
+            </div>
+            <div class="cert-body">
+              <div class="cert-meta-row">
+                <span class="cert-issuer">Infosys Springboard (Wingspan)</span>
+                <span class="cert-status-badge verified">Verified</span>
+              </div>
+              <h3 class="cert-title">Data Structures and Algorithms using Python - Part 1</h3>
+              <p class="cert-desc">
+                Rigorous algorithmic analysis, complexity notation (Big-O), linear and non-linear data structures in
+                Python.
+              </p>
+              <div class="cert-tags">
+                <span>Wingspan Authenticated</span>
+              </div>
+              <div class="cert-actions">
+                <button type="button" class="btn-cert-open" data-cert-modal="4">Inspect Credential</button>
+                <a href="https://verify.onwingspan.com" target="_blank" rel="noopener noreferrer"
+                  class="btn-cert-pdf">Verify on Wingspan ↗</a>
+              </div>
+            </div>
+          </article>
+
+          <!-- 06: NEXUS HYBRID VIRTUAL HACKATHON -->
+          <article class="cert-card liquid-card reveal-up" data-cert-type="hackathon" data-cert-id="5">
+            <div class="cert-badge-ribbon">
+              <span class="cert-flag">HACKATHON COMPETITION</span>
+              <span class="cert-period">05–06 June 2026</span>
+            </div>
+            <div class="cert-preview-box" data-cursor="INSPECT">
+              <img src="certificates/previews/nexus-hackathon.png" alt="Nexus Hybrid Hackathon Certificate"
+                class="cert-thumb" loading="lazy" />
+              <div class="cert-hover-overlay">
+                <span class="cert-inspect-pill">Quick Inspect 🔍</span>
+              </div>
+            </div>
+            <div class="cert-body">
+              <div class="cert-meta-row">
+                <span class="cert-issuer">Ramgarh Engg College &amp; Chandigarh University</span>
+                <span class="cert-status-badge verified">Verified</span>
+              </div>
+              <h3 class="cert-title">NEXUS HYBRID — Virtual Hackathon</h3>
+              <p class="cert-desc">
+                Actively participated in national hackathon demonstrating problem-solving, rapid prototyping, and
+                software engineering.
+              </p>
+              <div class="cert-tags">
+                <span>Graduate No: 700116e5-fd69-454d-87c8-0b2fc11885a5</span>
+              </div>
+              <div class="cert-actions">
+                <button type="button" class="btn-cert-open" data-cert-modal="5">Inspect Credential</button>
+                <a href="certificates/700116e5-fd69-454d-87c8-0b2fc11885a5.pdf" target="_blank"
+                  rel="noopener noreferrer" class="btn-cert-pdf">Open PDF ↗</a>
+              </div>
+            </div>
+          </article>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- SECTION 06: MILESTONES & HONORS -->
+    <section class="section achievements-section" id="achievements">
+      <div class="container">
+        <div class="section-meta-header reveal-up">
+          <div class="section-badge">
+            <span class="badge-idx">06</span>
+            <span class="badge-name">TRACK RECORD</span>
+          </div>
+          <h2 class="section-title">Academic Milestones &amp; Honors</h2>
+          <p class="section-subtitle">National hackathons, competitive examinations, and academic research undertakings.
+          </p>
+        </div>
+
+        <div class="achieve-grid" id="achieveGrid">
+          <!-- Card 1: SIH 2026 Participation -->
+          <div class="achieve-card liquid-card reveal-up">
+            <div class="achieve-top">
+              <span class="achieve-icon">🏆</span>
+              <span class="achieve-tag">National Hackathon</span>
+            </div>
+            <h3 class="achieve-title">Smart India Hackathon 2026</h3>
+            <p class="achieve-desc">
+              Institutional shortlist for Problem SIH26187 under Sashastra Seema Bal (SSB), building intelligent
+              computer vision intrusion analytics for border surveillance.
+            </p>
+            <div class="achieve-footer">
+              <span class="achieve-date">Ministry / Defense Problem Statement</span>
+            </div>
+          </div>
+
+          <!-- Card 2: GATE CSE Preparation Track -->
+          <div class="achieve-card liquid-card reveal-up">
+            <div class="achieve-top">
+              <span class="achieve-icon">📚</span>
+              <span class="achieve-tag">National Examination</span>
+            </div>
+            <h3 class="achieve-title">GATE CSE Preparation Track</h3>
+            <p class="achieve-desc">
+              Rigorous theoretical preparation spanning Discrete Mathematics, Theory of Computation, Compiler Design,
+              Computer Architecture, and Operating Systems for GATE CSE.
+            </p>
+            <div class="achieve-footer">
+              <span class="achieve-date">Target Attempt: GATE 2027 / 2028</span>
+            </div>
+          </div>
+
+          <!-- Card 3: Research Publication / ACEx Paper -->
+          <div class="achieve-card liquid-card reveal-up">
+            <div class="achieve-top">
+              <span class="achieve-icon">📄</span>
+              <span class="achieve-tag">Academic Research</span>
+            </div>
+            <h3 class="achieve-title">Multi-Agent Assistant Research (ACEx)</h3>
+            <p class="achieve-desc">
+              Primary investigation into collaborative LLM agent topologies for autonomous programming assistance and
+              automated static vulnerability scanning.
+            </p>
+            <div class="achieve-footer">
+              <span class="achieve-date">Manuscript In Preparation</span>
+            </div>
+          </div>
+
+          <!-- Card 4: Flexi-Credit Agentic AI Honors -->
+          <div class="achieve-card liquid-card reveal-up">
+            <div class="achieve-top">
+              <span class="achieve-icon">📜</span>
+              <span class="achieve-tag">Academic Honors</span>
+            </div>
+            <h3 class="achieve-title">Agentic AI Coursework Distinction</h3>
+            <p class="achieve-desc">
+              Completed advanced coursework on Agentic AI &amp; Automation at SIT Nagpur, building the automated
+              Health Diagnostic Report Summarizer system.
+            </p>
+            <div class="achieve-footer">
+              <span class="achieve-date">Symbiosis International University</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- SECTION 07: OPEN SOURCE & INVOLVEMENT -->
+    <section class="section contrib-section" id="contributions">
+      <div class="container">
+        <div class="section-meta-header reveal-up">
+          <div class="section-badge">
+            <span class="badge-idx">07</span>
+            <span class="badge-name">ENGAGEMENT</span>
+          </div>
+          <h2 class="section-title">Contributions &amp; Campus Leadership</h2>
+          <p class="section-subtitle">Active participation across developer communities, technical clubs, and peer
+            mentorship.</p>
+        </div>
+
+        <div class="contrib-grid">
+          <div class="contrib-card liquid-card reveal-up">
+            <div class="contrib-icon">🌐</div>
+            <h3 class="contrib-title">Open Source Software</h3>
+            <p class="contrib-desc">
+              Active contributor and open-source enthusiast maintaining repositories on GitHub as
+              <strong>@Pranavv28</strong>. Committed to reproducible research, modular architectures, and clear
+              developer documentation.
+            </p>
+            <a href="https://github.com/Pranavv28" target="_blank" rel="noopener noreferrer" class="contrib-link">
+              <span>View GitHub Repositories</span>
+              <svg width="10" height="10" viewBox="0 0 10 10" fill="none">
+                <path d="M1 9L9 1H2M9 1V8" stroke="currentColor" stroke-width="1.4" />
+              </svg>
+            </a>
+          </div>
+
+          <div class="contrib-card liquid-card reveal-up">
+            <div class="contrib-icon">🏛️</div>
+            <h3 class="contrib-title">Technical Clubs &amp; SIT Committees</h3>
+            <p class="contrib-desc">
+              Engaged member of student technical bodies at Symbiosis Institute of Technology, Nagpur. Assisting peers
+              with competitive coding setups, hackathon ideation, and collaborative engineering.
+            </p>
+            <span class="contrib-badge">SIT Nagpur Campus</span>
+          </div>
+
+          <div class="contrib-card liquid-card reveal-up">
+            <div class="contrib-icon">💡</div>
+            <h3 class="contrib-title">Workshops &amp; Hackathon Mentoring</h3>
+            <p class="contrib-desc">
+              Participating in and supporting technical workshops, hackathon code jams, and project exhibitions
+              showcasing AI/ML applications to junior engineering cohorts.
+            </p>
+            <span class="contrib-badge">Student Community</span>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- SECTION 08: GET IN TOUCH -->
+    <section class="section contact-section" id="contact">
+      <div class="container">
+        <div class="contact-card-main liquid-card reveal-up">
+          <div class="contact-header-block">
+            <div class="section-badge">
+              <span class="badge-idx">08</span>
+              <span class="badge-name">INITIATE CONTACT</span>
+            </div>
+            <h2 class="contact-title">Let's Build Something Exceptional Together</h2>
+            <p class="contact-lead">
+              Have an internship opportunity, a research collaboration, or want to discuss applied AI architectures? My
+              inbox is always open.
+            </p>
+          </div>
+
+          <!-- Interactive Contact Channels -->
+          <!-- Interactive Contact Channels -->
+          <div class="contact-grid">
+            <!-- Email -->
+            <div class="contact-tile copyable" data-copy="pranavlakhe1@gmail.com" role="button" tabindex="0"
+              title="Click to copy email address">
+              <div class="tile-icon-box">✉️</div>
+              <div class="tile-body">
+                <span class="tile-label">Direct Email</span>
+                <span class="tile-val">pranavlakhe1@gmail.com</span>
+              </div>
+              <span class="tile-action">Copy 📋</span>
+            </div>
+
+            <!-- GitHub -->
+            <a href="https://github.com/Pranavv28" target="_blank" rel="noopener noreferrer" class="contact-tile"
+              title="Open GitHub Profile">
+              <div class="tile-icon-box">💻</div>
+              <div class="tile-body">
+                <span class="tile-label">GitHub Repository</span>
+                <span class="tile-val">github.com/Pranavv28</span>
+              </div>
+              <span class="tile-action">Visit ↗</span>
+            </a>
+
+            <!-- LinkedIn -->
+            <a href="https://www.linkedin.com" target="_blank" rel="noopener noreferrer" class="contact-tile"
+              title="Connect on LinkedIn">
+              <div class="tile-icon-box">🔗</div>
+              <div class="tile-body">
+                <span class="tile-label">Professional LinkedIn</span>
+                <span class="tile-val">linkedin.com/in/pranav-lakhe</span>
+              </div>
+              <span class="tile-action">Connect ↗</span>
+            </a>
+
+            <!-- Phone / WhatsApp -->
+            <div class="contact-tile copyable" data-copy="+919876543210" role="button" tabindex="0"
+              title="Click to copy phone number">
+              <div class="tile-icon-box">📞</div>
+              <div class="tile-body">
+                <span class="tile-label">Phone &amp; WhatsApp</span>
+                <span class="tile-val">+91 98765 43210</span>
+              </div>
+              <span class="tile-action">Copy 📋</span>
+            </div>
+          </div>
+
+          <!-- Automated Direct Mail Dispatch Console -->
+          <div class="mail-dispatcher-block">
+            <div class="dispatcher-header">
+              <div class="dispatcher-badge">
+                <span class="disp-dot"></span>
+                <span>DIRECT INBOX PIPELINE // AUTOMATED DISPATCH</span>
+              </div>
+              <h3 class="dispatcher-title">Send Message to Pranav</h3>
+              <p class="dispatcher-sub">
+                Submit this automated form to route your message directly to <strong>pranavlakhe1@gmail.com</strong>.
+              </p>
+            </div>
+
+            <form class="automated-contact-form" id="automatedContactForm">
+              <div class="form-row">
+                <div class="form-field">
+                  <label for="senderName" class="form-label">Your Name / Organization</label>
+                  <input type="text" id="senderName" name="name" class="form-input" placeholder="e.g. Alex Rivera"
+                    required />
+                </div>
+                <div class="form-field">
+                  <label for="senderEmail" class="form-label">Your Email Address</label>
+                  <input type="email" id="senderEmail" name="email" class="form-input"
+                    placeholder="e.g. alex@company.com" required />
+                </div>
+              </div>
+
+              <div class="form-row">
+                <div class="form-field">
+                  <label for="mailSubject" class="form-label">Subject / Purpose</label>
+                  <select id="mailSubject" name="subject" class="form-select" required>
+                    <option value="Internship & Engineering Role">🏆 Internship / Engineering Role</option>
+                    <option value="AI / ML Research Collaboration">🔬 AI / ML Research Collaboration</option>
+                    <option value="Technical Project Discussion">💻 Technical Project Discussion</option>
+                    <option value="General Engineering Inquiry">⚡ General Inquiry / Quick Chat</option>
+                  </select>
+                </div>
+              </div>
+
+              <div class="form-field">
+                <label for="senderMessage" class="form-label">Message Details</label>
+                <textarea id="senderMessage" name="message" class="form-textarea" rows="4"
+                  placeholder="Share details about the role, technical question, or project collaboration..."
+                  required></textarea>
+              </div>
+
+              <div class="form-actions-row">
+                <button type="submit" class="btn-dispatch-mail" id="dispatchMailBtn">
+                  <span class="btn-icon">⚡</span>
+                  <span class="btn-text" id="dispatchBtnText">Send Mail Automatically</span>
+                </button>
+                <button type="button" class="btn-gmail-compose" id="gmailComposeBtn"
+                  title="Launch prefilled draft in Gmail">
+                  <span>Open in Gmail ↗</span>
+                </button>
+              </div>
+
+              <!-- Dispatch Feedback Bar -->
+              <div class="dispatch-feedback" id="dispatchFeedback" style="display: none;"></div>
+            </form>
+          </div>
+
+          <!-- Live Local Telemetry Bar -->
+          <div class="contact-telemetry-bar">
+            <div class="telemetry-item">
+              <span class="telemetry-dot"></span>
+              <span>LOCATION: NAGPUR, MAHARASHTRA, INDIA</span>
+            </div>
+            <div class="telemetry-item">
+              <span>LOCAL TIME: <strong id="liveNagpurClock">--:--:-- IST</strong></span>
+            </div>
+            <div class="telemetry-item">
+              <span>STATUS: AVAILABLE FOR SUMMER 2026/27</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <!-- Site Footer -->
+  <footer class="site-footer">
+    <div class="container footer-container">
+      <div class="footer-left">
+        <a href="#hero" class="footer-brand">
+          <span>PL</span><span class="brand-dot">.</span>
+        </a>
+        <p class="footer-copy">
+          © 2026 Pranav Lakhe. Handcrafted with modern HTML5, Vanilla CSS &amp; JavaScript. Hardware-accelerated
+          animations via GSAP &amp; WebGL. Zero bloated frameworks.
+        </p>
+      </div>
+      <div class="footer-right">
+        <a href="#hero" class="footer-scroll-top" id="scrollTop" aria-label="Scroll to top of page">
+          <span>BACK TO TOP</span>
+          <svg width="12" height="12" viewBox="0 0 12 12" fill="none">
+            <path d="M6 11V1M6 1L1 6M6 1L11 6" stroke="currentColor" stroke-width="1.8" />
+          </svg>
+        </a>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Project Deep-Dive Modal -->
+  <div class="modal-backdrop" id="projectModal" role="dialog" aria-modal="true" aria-hidden="true" tabindex="-1">
+    <div class="modal-wrapper">
+      <div class="modal-card liquid-card">
+        <button class="modal-close-btn" id="modalCloseBtn" aria-label="Close modal dialog">✕</button>
+
+        <div class="modal-header">
+          <div class="modal-pills-row">
+            <span class="modal-cat-pill" id="modalTag">Category</span>
+            <span class="modal-status-pill" id="modalStatus">Status</span>
+          </div>
+          <h2 class="modal-title" id="modalTitle">Project Title</h2>
+          <p class="modal-subtitle" id="modalSubtitle">Subheading or one-line pitch</p>
+        </div>
+
+        <div class="modal-body-scroll">
+          <div class="modal-block">
+            <h4 class="modal-block-heading">Problem Statement</h4>
+            <p class="modal-block-text" id="modalProblem">Problem statement details...</p>
+          </div>
+
+          <div class="modal-block">
+            <h4 class="modal-block-heading">Architectural Design &amp; Methodology</h4>
+            <p class="modal-block-text" id="modalArchitecture">Architecture details...</p>
+          </div>
+
+          <div class="modal-block">
+            <h4 class="modal-block-heading">Technologies &amp; Libraries</h4>
+            <div class="modal-tech-pills" id="modalTechTags"></div>
+          </div>
+        </div>
+
+        <div class="modal-footer">
+          <a href="https://github.com/Pranavv28" target="_blank" rel="noopener noreferrer" class="btn btn-primary"
+            id="modalRepoBtn">
+            <span>View on GitHub</span>
+            <svg width="10" height="10" viewBox="0 0 10 10" fill="none">
+              <path d="M1 9L9 1M9 1H2M9 1V8" stroke="currentColor" stroke-width="1.4" />
+            </svg>
+          </a>
+          <button type="button" class="btn btn-secondary" id="modalDismissBtn">Dismiss</button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Certificate Lightbox Modal -->
+  <div class="modal-backdrop" id="certLightboxModal" role="dialog" aria-modal="true" aria-hidden="true" tabindex="-1">
+    <div class="cert-lightbox-container">
+      <div class="cert-lightbox-card liquid-card">
+        <button class="modal-close-btn" id="certLightboxCloseBtn" aria-label="Close certificate lightbox">✕</button>
+
+        <div class="cert-lightbox-main">
+          <!-- Main Certificate Image View -->
+          <div class="cert-lightbox-img-wrap">
+            <img src="" alt="Certificate Preview" id="lightboxImg" class="lightbox-img" />
+          </div>
+
+          <!-- Certificate Metadata Sidebar -->
+          <div class="cert-lightbox-info">
+            <div class="cert-lightbox-badge-row">
+              <span class="cert-lightbox-type" id="lightboxType">Internship</span>
+              <span class="cert-lightbox-date" id="lightboxDate">June 2026</span>
+            </div>
+            <h3 class="cert-lightbox-title" id="lightboxTitle">Certificate Title</h3>
+            <p class="cert-lightbox-issuer" id="lightboxIssuer">Issuing Institution</p>
+            <p class="cert-lightbox-desc" id="lightboxDesc">Description details...</p>
+
+            <div class="cert-lightbox-meta-block">
+              <div class="meta-field">
+                <span class="meta-label">Credential / Verification ID:</span>
+                <span class="meta-val" id="lightboxId">—</span>
+              </div>
+              <div class="meta-field">
+                <span class="meta-label">Authenticity Status:</span>
+                <span class="meta-val highlight-val">✓ Verified Official Record</span>
+              </div>
+            </div>
+
+            <div class="cert-lightbox-actions">
+              <a href="#" target="_blank" rel="noopener noreferrer" class="btn btn-primary" id="lightboxDocBtn">
+                <span>Open Document / PDF</span>
+                <svg width="10" height="10" viewBox="0 0 10 10" fill="none">
+                  <path d="M1 9L9 1M9 1H2M9 1V8" stroke="currentColor" stroke-width="1.4" />
+                </svg>
+              </a>
+              <a href="#" target="_blank" rel="noopener noreferrer" class="btn btn-secondary" id="lightboxVerifyBtn">
+                <span>External Verification ↗</span>
+              </a>
+            </div>
+
+            <!-- Lightbox Nav Controls -->
+            <div class="cert-lightbox-controls">
+              <button type="button" class="lightbox-nav-btn" id="certPrevBtn" aria-label="Previous Certificate">←
+                Prev</button>
+              <span class="lightbox-counter" id="certCounter">1 / 6</span>
+              <button type="button" class="lightbox-nav-btn" id="certNextBtn" aria-label="Next Certificate">Next
+                →</button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Developer Command Palette Terminal -->
+  <div class="modal-backdrop" id="terminalModal" role="dialog" aria-modal="true" aria-hidden="true" tabindex="-1">
+    <div class="terminal-modal-wrapper">
+      <div class="terminal-window">
+        <!-- Terminal Titlebar -->
+        <div class="terminal-titlebar">
+          <div class="terminal-dots">
+            <span class="tdot dot-red" id="termCloseDot" title="Close Terminal"></span>
+            <span class="tdot dot-yellow"></span>
+            <span class="tdot dot-green"></span>
+          </div>
+          <div class="terminal-name">pranav@lakhe-portfolio:~$ [DEVELOPER CONSOLE]</div>
+          <button type="button" class="terminal-esc-key" id="terminalCloseBtn" aria-label="Close terminal">ESC</button>
+        </div>
+
+        <!-- Terminal Body -->
+        <div class="terminal-body">
+          <div class="terminal-feed" id="terminalOutput">
+            <div class="t-line t-muted">Welcome to Pranav Lakhe's Interactive Developer Terminal.</div>
+            <div class="t-line t-muted">Type <span class="t-cmd">help</span> to view available commands, or click the
+              quick action chips below:</div>
+          </div>
+
+          <!-- Quick Chips -->
+          <div class="terminal-chips">
+            <button type="button" class="term-chip" data-cmd="help">help</button>
+            <button type="button" class="term-chip" data-cmd="projects">projects</button>
+            <button type="button" class="term-chip" data-cmd="skills">skills</button>
+            <button type="button" class="term-chip" data-cmd="about">about</button>
+            <button type="button" class="term-chip" data-cmd="contact">contact</button>
+            <button type="button" class="term-chip" data-cmd="theme">theme</button>
+            <button type="button" class="term-chip" data-cmd="clear">clear</button>
+          </div>
+
+          <!-- Terminal Input Row -->
+          <form class="terminal-form" id="terminalForm" autocomplete="off">
+            <span class="terminal-prompt">❯</span>
+            <input type="text" id="terminalInput" class="terminal-input"
+              placeholder="Type a command (e.g. projects, contact, theme)..." spellcheck="false" />
+          </form>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Floating Quick Theme Switcher Dock -->
+  <aside class="floating-theme-dock" id="floatingThemeDock" aria-label="Quick Theme Switcher">
+    <div class="dock-inner">
+      <span class="dock-icon" title="Theme Palette">🎨</span>
+      <span class="dock-title">Theme</span>
+      <div class="dock-swatches" role="radiogroup" aria-label="Color Themes">
+        <button type="button" class="dock-swatch active" data-theme-pick="emerald" title="Quantum Emerald Theme"
+          aria-label="Activate Emerald Theme">
+          <span class="swatch-ring"></span>
+          <span class="swatch-color swatch-emerald"></span>
+        </button>
+        <button type="button" class="dock-swatch" data-theme-pick="violet" title="Plasma Violet Theme"
+          aria-label="Activate Violet Theme">
+          <span class="swatch-ring"></span>
+          <span class="swatch-color swatch-violet"></span>
+        </button>
+        <button type="button" class="dock-swatch" data-theme-pick="solar" title="Solar Amber Theme"
+          aria-label="Activate Solar Theme">
+          <span class="swatch-ring"></span>
+          <span class="swatch-color swatch-solar"></span>
+        </button>
+        <button type="button" class="dock-swatch" data-theme-pick="cyan" title="Arctic Cyan Theme"
+          aria-label="Activate Cyan Theme">
+          <span class="swatch-ring"></span>
+          <span class="swatch-color swatch-cyan"></span>
+        </button>
+      </div>
+    </div>
+  </aside>
+
+  <!-- Toast Container -->
+  <div class="toast-container" id="toastContainer" aria-live="polite"></div>
+
+  <!-- External Libraries (Deferred / Hardware Accelerated) -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js"></script>
+  <script src="https://unpkg.com/lenis@1.1.20/dist/lenis.min.js"></script>
+  <script src="script.js"></script>
+</body>
+
+</html>

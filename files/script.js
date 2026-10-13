@@ -1204,6 +1204,29 @@ gmailComposeBtn?.addEventListener('click', () => {
   showToast('Launching Google Mail composer...', '✉️');
 });
 
+const mailtoComposeBtn = document.getElementById('mailtoComposeBtn');
+const updateMailtoLink = () => {
+  const name = document.getElementById('senderName')?.value.trim() || 'Visitor';
+  const email = document.getElementById('senderEmail')?.value.trim() || '';
+  const subject = document.getElementById('mailSubject')?.value.trim() || 'Portfolio Inquiry';
+  const message = document.getElementById('senderMessage')?.value.trim() || '';
+  const bodyText = message ? `Hi Pranav,\n\n${message}\n\nBest regards,\n${name}${email ? ` (${email})` : ''}` : `Hi Pranav,\n\nI came across your portfolio and wanted to reach out regarding...`;
+
+  if (mailtoComposeBtn) {
+    mailtoComposeBtn.href = `mailto:pranavlakhe1@gmail.com?subject=${encodeURIComponent(`[Portfolio] ${subject}`)}&body=${encodeURIComponent(bodyText)}`;
+  }
+};
+
+['senderName', 'senderEmail', 'mailSubject', 'senderMessage'].forEach((id) => {
+  document.getElementById(id)?.addEventListener('input', updateMailtoLink);
+  document.getElementById(id)?.addEventListener('change', updateMailtoLink);
+});
+
+mailtoComposeBtn?.addEventListener('click', () => {
+  updateMailtoLink();
+  showToast('Launching default email client...', '✉️');
+});
+
 document.getElementById('resumeBtn')?.addEventListener('click', () => {
   showToast('Downloading Pranav Lakhe Resume PDF...', '📄');
 });

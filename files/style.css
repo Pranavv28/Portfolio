@@ -2599,6 +2599,31 @@ button {
   transform: translateY(-2px);
 }
 
+.btn-mailto-compose {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.45rem;
+  padding: 0.85rem 1.4rem;
+  border-radius: 10px;
+  background: rgba(255, 255, 255, 0.05);
+  border: 1px solid var(--border);
+  color: var(--text-muted);
+  font-family: var(--font-mono);
+  font-size: 0.82rem;
+  font-weight: 600;
+  text-decoration: none;
+  transition: all 0.25s var(--ease-expo);
+  cursor: pointer;
+}
+
+.btn-mailto-compose:hover {
+  background: rgba(0, 210, 255, 0.12);
+  border-color: var(--accent-secondary);
+  color: #fff;
+  transform: translateY(-2px);
+  box-shadow: 0 0 16px var(--accent-sec-glow);
+}
+
 .dispatch-feedback {
   padding: 0.9rem 1.25rem;
   border-radius: 8px;

@@ -1108,16 +1108,35 @@ const dispatchFeedback = document.getElementById('dispatchFeedback');
 const gmailComposeBtn = document.getElementById('gmailComposeBtn');
 
 automatedContactForm?.addEventListener('submit', async (e) => {
-  e.preventDefault();
   const name = document.getElementById('senderName')?.value.trim();
   const email = document.getElementById('senderEmail')?.value.trim();
-  const subject = document.getElementById('mailSubject')?.value.trim();
+  const subject = document.getElementById('mailSubject')?.value.trim() || 'Inquiry';
   const message = document.getElementById('senderMessage')?.value.trim();
 
   if (!name || !email || !message) {
+    e.preventDefault();
     showToast('Please fill out all required fields.', '⚠️');
     return;
   }
+
+  const hiddenSubject = document.getElementById('hiddenSubject');
+  if (hiddenSubject) {
+    hiddenSubject.value = `[Portfolio Dispatch] ${subject} from ${name}`;
+  }
+
+  // If running locally from file://, FormSubmit rejects AJAX. Allow native form submit in new tab.
+  const isLocalFile = window.location.protocol === 'file:';
+  if (isLocalFile) {
+    showToast('Opening FormSubmit dispatch tab...', '✉️');
+    if (dispatchFeedback) {
+      dispatchFeedback.style.display = 'block';
+      dispatchFeedback.className = 'dispatch-feedback info';
+      dispatchFeedback.innerHTML = `⏳ <strong>Dispatching via FormSubmit...</strong><br>Note: If this is the first time using FormSubmit, check <strong>pranavlakhe1@gmail.com</strong> (including Spam/Updates) to click the 1-time activation link! You can also click <strong>Open in Gmail</strong> to send directly.`;
+    }
+    return; // allow native submit
+  }
+
+  e.preventDefault();
 
   // Set loading state
   if (dispatchMailBtn) dispatchMailBtn.disabled = true;
@@ -1145,25 +1164,27 @@ automatedContactForm?.addEventListener('submit', async (e) => {
 
     const data = await response.json();
 
-    if (response.ok || data.success === 'true' || data.success === true) {
+    if (response.ok && (data.success === 'true' || data.success === true)) {
       if (dispatchFeedback) {
         dispatchFeedback.style.display = 'block';
         dispatchFeedback.className = 'dispatch-feedback success';
-        dispatchFeedback.innerHTML = `✓ <strong>Message dispatched successfully!</strong> Your transmission has been delivered directly to <strong>pranavlakhe1@gmail.com</strong>. Pranav will respond promptly.`;
+        dispatchFeedback.innerHTML = `✓ <strong>Message dispatched successfully!</strong> Delivered directly to <strong>pranavlakhe1@gmail.com</strong>.`;
       }
       showToast("Email delivered to Pranav's inbox! 🚀", '✉️');
       automatedContactForm.reset();
     } else {
-      throw new Error(data.message || 'Dispatch failed');
+      throw new Error(data.message || 'FormSubmit requires confirmation or returned error');
     }
   } catch (err) {
     console.warn('FormSubmit AJAX fallback:', err);
+    // Fallback: Submit natively in a new tab
+    automatedContactForm.submit();
     if (dispatchFeedback) {
       dispatchFeedback.style.display = 'block';
-      dispatchFeedback.className = 'dispatch-feedback success';
-      dispatchFeedback.innerHTML = `✓ <strong>Message dispatched!</strong> Routed to <strong>pranavlakhe1@gmail.com</strong>. You can also use <strong>Open in Gmail</strong> for direct threads.`;
+      dispatchFeedback.className = 'dispatch-feedback info';
+      dispatchFeedback.innerHTML = `⏳ <strong>Form submission redirected to FormSubmit.</strong><br>Check <strong>pranavlakhe1@gmail.com</strong> to confirm the 1-time activation if prompted, or use <strong>Open in Gmail</strong>.`;
     }
-    showToast('Dispatched! Fallback composer ready.', '✉️');
+    showToast('Submitting via FormSubmit gateway...', '✉️');
   } finally {
     if (dispatchMailBtn) dispatchMailBtn.disabled = false;
     if (dispatchBtnText) dispatchBtnText.textContent = 'Send Mail Automatically';
